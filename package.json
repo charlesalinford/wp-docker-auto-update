@@ -1,0 +1,15 @@
+{
+  "name": "wp-docker-auto-update",
+  "version": "1.0.0",
+  "description": "VI node.js script for auto-updating WordPress core and packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles L",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "dotenv": "^4.0.0"
+  }
+}
