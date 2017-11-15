@@ -4,12 +4,18 @@
   "description": "VI node.js script for auto-updating WordPress core and packages",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node setup.js",
+    "start": "node index.js",
+    "setup": "node setup.js"
   },
   "author": "Charles L",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.1.2",
     "dotenv": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlesalinford/wp-docker-auto-update"
   }
 }
