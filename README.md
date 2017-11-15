@@ -1,16 +1,20 @@
 # wp-docker-auto-update
 VI node.js script for auto-updating WordPress core and packages on Docker projects
 
+## Installation
 1. Clone repository into /docker folder e.g. /medview.com.au/devops/docker
 
-2. run 'npm install'
+2. cd into the repository folder, then run 'npm install'
 
 3. run 'docker ps', then copy the ID *or* Name of the PHP container, e.g. d8a4aaeac3f0 (ID) *or* php--medview-com-au (Name)
 
-3. Open existing .env file and add the following variable:
-	- PHP_CONTAINER=[ name/ID of the PHP container ]
+3a. open the .env file in the /docker folder, and take note of the DOMAIN value e.g. DOMAIN=medview.com.au
 
-4. run 'node index'
+3. Open the .env file and add the following details:
+	- PHP_CONTAINER=[ name/ID of the PHP container ]
+	- DOMAIN=[ DOMAIN .env value ]
+
+4. run 'node index' to start the script
 
 ## Troubleshooting
 * Message: */bin/bash: wp: command not found*
