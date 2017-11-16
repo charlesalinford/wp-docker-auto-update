@@ -35,7 +35,7 @@ function setup(){
 	}
 	else{
 		console.log('PHP container found: ' + containers);
-		console.log('Is this the correct PHP container for this project? ');
+		console.log('Is this the correct PHP container for this project? (yes/no)');
 
 		//Use user input to add/reject current Docker container
 		process.stdin.on('data', function(data){
