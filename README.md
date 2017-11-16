@@ -26,6 +26,10 @@ VI node.js script for auto-updating WordPress core and packages on Docker projec
 	* Problem: The ID or name supplied for the PHP container in the .env file is wrong/missing. 
 	* Solution: Run 'docker ps', copy the ID *or* Name of the PHP container, then depending on the problem, add 'PHP_CONTAINER=[ name/ID of the PHP container ]' to the .env file, or double-check that the name/ID match the ones supplied by Docker.
 
+* Message: */bin/bash: line 0: cd: ../vhosts/[ domain URL ]/public: No such file or directory*
+	* Problem: The domain supplied in the .env file doesn't match the name of the site directory in the Docker container. 
+	* Solution: Log into the PHP container using 'docker exec -t -i [ name/id of the PHP container ] /bin/bash', run '../vhosts' to get to the site directory, then run 'ls' to find the correct directory name. Copy this name, then replace the 'DOMAIN' value in your .env file.
+
 * Message: *Error: Cannot find module '[ module name ]*
 	* Problem: node.js modules are missing. 
 	* Solution: Run 'npm install' to download all necessary modules.
