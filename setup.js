@@ -39,7 +39,7 @@ function setup(){
 
 		//Use user input to add/reject current Docker container
 		process.stdin.on('data', function(data){
-			var answer = data.toString().trim();
+			var answer = data.toString().toLowerCase().trim();
 			if(answer == 'y' || answer == 'yes'){
 				console.log(containers.toString().trim() + ' will be added to .env file.');
 				createEnv(domain, containers.toString().trim());
