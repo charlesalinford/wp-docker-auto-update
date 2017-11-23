@@ -21,6 +21,10 @@ VI node.js script for auto-updating WordPress core and packages on Docker projec
 * Message: */bin/bash: wp: command not found*
 	* Problem: wp-cli is not installed in the PHP container. 
 	* Solution: Log into the PHP container using 'docker exec -t -i [ name/id of the PHP container ] /bin/bash', follow the instructions on http://wp-cli.org/ to install wp-cli, then run the update script again.
+	
+* Message: TypeError: Expected options to be either an object or a string, but got function instead*
+	* Problem: The version of node.js you're using compatible with this script
+	* Solution: Install Node Version Manager (https://github.com/creationix/nvm), and switch to version 8 or above.
 
 * Message: *Error: No such container: undefined*
 	* Problem: The ID or name supplied for the PHP container in the .env file is wrong/missing. 
