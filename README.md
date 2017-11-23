@@ -22,7 +22,7 @@ VI node.js script for auto-updating WordPress core and packages on Docker projec
 	* Problem: wp-cli is not installed in the PHP container. 
 	* Solution: Log into the PHP container using 'docker exec -t -i [ name/id of the PHP container ] /bin/bash', follow the instructions on http://wp-cli.org/ to install wp-cli, then run the update script again.
 	
-* Message: TypeError: Expected options to be either an object or a string, but got function instead*
+* Message: *TypeError: Expected options to be either an object or a string, but got function instead*
 	* Problem: The version of node.js you're using compatible with this script
 	* Solution: Install Node Version Manager (https://github.com/creationix/nvm), and switch to version 8 or above.
 
